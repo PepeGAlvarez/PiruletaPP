@@ -1,0 +1,45 @@
+<div class="contenedorSemaforo">
+@for (i of repeticiones; track i){          <!-- usando una variable repeticiones en el .ts -->
+ <!-- (i of [1, 2, 3, 4, 5]; track i)  -->
+
+
+    <div class="cajita"> 
+
+        @if(contador() >= 2) {
+            <div class ="circulo rojo"> </div>
+            } @else {
+            <div class ="circulo gris"> </div>
+            }
+            @if(contador() === 1) {
+            <div class ="circulo naranja"> </div>
+            } @else {
+            <div class ="circulo gris"> </div>
+            }
+            @if(contador() <= 0) {
+            <div class ="circulo verde"> </div>
+            } @else {
+            <div class ="circulo gris"> </div>
+            }
+
+    </div>
+}
+</div>
+
+<h1 [style.color]="colorin()">{{contador()}}</h1>    
+
+
+<button (click)="incrementar()">Incrementar</button>
+<button (click)="decrementar()">Decrementar</button>
+<button (click)="resetear()">Resetear</button>
+
+
+<p> La siguiente prueba es para @ if</p>
+
+@if(contador() >= 2) {
+    <p style="color: green;"> A: Esto se muestra si contador es >=2 </p>
+    } @else if (contador() === 1) {
+    <p style="color: orange;"> B: Esto se muestra si contador es = 1</p>
+    }@else if (contador() <= 0) {
+    <p style="color: red;"> C: Esto se muestra si contador es <= 0 </p>
+    }
+

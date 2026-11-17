@@ -1,0 +1,38 @@
+.cajita{
+    border: 2px solid black;
+    height: 150px;
+    width: 50px;
+
+    background-color: rgb(56, 62, 62);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+.circulo{
+    border: 2px solid black;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    border: 2px solid black;
+}
+.rojo{
+background-color: red;
+}
+.naranja{
+background-color: orange;
+}
+.verde{
+background-color: green;
+}
+.gris{
+    background-color: gray;
+}
+.contenedorSemaforo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2px;
+}
