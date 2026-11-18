@@ -1,1 +1,15 @@
-<p>frutasyverduras works!</p>
+<ul>
+    @for (fruta of frutas; track fruta.nombre) {
+        <li>
+            <img [src]="fruta.imagen" width="20" height="20">   
+             <!-- Mejor esto que lo anteior
+              "<img src="{{fruta.imagen}}" width="20" height="20"> 
+             porque si no va a convertirlo primero a texto, lo pega en el atributo 
+             y después el navegador lo intenta leer -->
+            {{ fruta.nombre }}: 
+            @if (fruta.like) {
+                👍
+            }
+        </li>
+    }
+</ul>

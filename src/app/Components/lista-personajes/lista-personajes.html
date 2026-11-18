@@ -1,0 +1,10 @@
+<ul>
+    @for (personaje of personajes; track personaje.nombre) {
+        <li>
+            <img [src]="personaje.imagen" width="20" height="20">   
+
+            {{ personaje.nombre }}
+            
+        </li>
+    }
+</ul>
