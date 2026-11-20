@@ -25,14 +25,17 @@
 }
 </div>
 
-<h1 [style.color]="colorin()">{{contador()}}</h1>    
+<div class="botones">
 
+    <h1 [style.color]="colorin()">{{contador()}}</h1>    
 
-<button (click)="incrementar()">Incrementar</button>
-<button (click)="decrementar()">Decrementar</button>
-<button (click)="resetear()">Resetear</button>
-
-
+    <div class="fila-botones">
+        <button matButton="filled" (click)="incrementar()">Incrementar</button>
+        <button matButton="outlined" (click)="decrementar()">Decrementar</button>
+        <button matButton="tonal" (click)="resetear()">Resetear</button>
+    </div>
+</div>
+<!-- 
 <p> La siguiente prueba es para @ if</p>
 
 @if(contador() >= 2) {
@@ -42,4 +45,4 @@
     }@else if (contador() <= 0) {
     <p style="color: red;"> C: Esto se muestra si contador es <= 0 </p>
     }
-
+ -->

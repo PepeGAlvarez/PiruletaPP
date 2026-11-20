@@ -1,10 +1,12 @@
-<ul>
-    @for (personaje of personajes; track personaje.nombre) {
-        <li>
-            <img [src]="personaje.imagen" width="20" height="20">   
+<div class="contenedor-personajes">
+    <ul>
+        @for (personaje of personajes; track personaje.nombre) {
+            <li>
+                <img [src]="personaje.imagen" width="40" height="40">   
 
-            {{ personaje.nombre }}
-            : {{ personaje.descripcion }}
-        </li>
-    }
-</ul>
+                {{ personaje.nombre }}
+                : {{ personaje.descripcion }}
+            </li>
+        }
+    </ul>
+</div>

@@ -1,0 +1,36 @@
+<div class="calculadora">
+
+    <div class="pantalla">
+    {{ pantalla() }}
+  </div>
+
+  <div class="fila">
+    <button class="button-ac" (click)="pulsarBoton('AC')">AC</button>
+  </div>
+
+  <div class="fila">
+    @for (button of fila1; track button) {
+      <button (click)="pulsarBoton(button)">{{ button }}</button>
+    }
+  </div>
+
+  <div class="fila">
+    @for (button of fila2; track button) {
+      <button (click)="pulsarBoton(button)">{{ button }}</button>
+    }
+  </div>
+
+  <div class="fila">
+    @for (button of fila3; track button) {
+      <button (click)="pulsarBoton(button)">{{ button }}</button>
+    }
+  </div>
+
+  <div class="fila">
+    @for (button of fila4; track button) {
+      <button [class.button-igual]="button === '='" (click)="pulsarBoton(button)">
+        {{ button }}
+      </button>
+    }
+  </div>
+</div>

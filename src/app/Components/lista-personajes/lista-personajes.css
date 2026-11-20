@@ -1,0 +1,18 @@
+.contenedor-personajes {
+  display: flex;
+  justify-content: flex-start; 
+  padding-left: 50px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  font-size: 20px;
+}
+
+li {
+  display: flex;
+  align-items: center; 
+  gap: 10px;
+  margin-bottom: 12px;
+}

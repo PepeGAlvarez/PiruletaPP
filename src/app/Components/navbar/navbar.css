@@ -1,0 +1,18 @@
+.opcion {
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.opcion:hover {
+    color: var(--mat-sys-secondary);
+}
+
+.navbar {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 5px;
+    background-color: var(--mat-sys-primary);
+    color: var(--mat-sys-on-primary);
+}

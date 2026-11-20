@@ -1,0 +1,41 @@
+<div class="contenedor-formulario">
+<h1>Formulario de Halloween</h1>
+    <form [formGroup]="formularioHalloween" (ngSubmit)="enviar()">
+        <div class="formulario">
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" formControlName="nombre">
+            @if(formularioHalloween.controls.nombre.invalid){
+                <span class="error">El dato no es válido como nombre</span>
+            }
+            <label for="email">email:</label>
+            <input type="email" id="email" formControlName="email">
+            @if(formularioHalloween.controls.email.invalid){
+                <span class="error">El dato no es válido como email</span>
+            }
+
+            <label>Edad:</label>
+            <input type="number" id="edad" formControlName="edad">
+            @if(formularioHalloween.controls.edad.invalid){
+                <span class="error">El dato no es válido como edad</span>
+            }
+
+            <label for="objeto">Objeto:</label>
+            <input type="text" id="objeto" formControlName="objeto">
+            @if(formularioHalloween.controls.objeto.invalid){
+            <span class="error">El dato no es válido como objeto</span>
+        }
+
+            <button type="submit" [disabled]="formularioHalloween.invalid">Enviar</button>
+        </div>
+    </form>
+
+
+<h3>Lista de objetos de Halloween:</h3>
+<ol>
+    @for(item of objetos; track $index){
+        <li>{{ item }}</li>
+    }
+</ol>
+
+</div>

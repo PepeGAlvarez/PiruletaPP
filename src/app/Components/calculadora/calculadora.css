@@ -1,0 +1,48 @@
+.calculadora {
+  width: 240px;
+  border: 2px solid #333;
+  padding: 10px;
+  font-family: sans-serif;
+  background-color: blue; 
+  margin: 40px auto;      
+}
+
+.pantalla {
+  background-color: whitesmoke;
+  color: #000;
+  font-size: 28px;
+  text-align: right;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.fila {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+button {
+  flex: 1;
+  padding: 14px 0;
+  font-size: 18px;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background-color: #999;
+}
+
+button:hover {
+  background-color: #d0d0d0;
+}
+
+.button-ac {
+  background-color: #ff0000;
+}
+
+.button-igual {
+  background-color: #4a90e2;
+  color: white;
+  font-weight: bold;
+}
