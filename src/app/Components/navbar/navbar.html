@@ -1,4 +1,4 @@
-<mat-toolbar class="navbar">
+<mat-toolbar class="navbar"[class.toolbar-oscura]="temaService.modoOscuro()">
 
   <!-- <button matIconButton class="example-icon" aria-label="Example icon-button with menu icon">
     <mat-icon>menu</mat-icon>
@@ -15,12 +15,18 @@
   <span class="opcion" routerLink="/frutasyverduras"> Frutas y Verduras</span>
   <span class="opcion" routerLink="/lista-personajes"> Lista de Personajes</span>
   <span class="opcion" routerLink="/calculadora"> Calculadora</span>
-    <span class="opcion" routerLink="/padre"> Padre</span>
+  <span class="opcion" routerLink="/padre"> Padre</span>
   <span class="opcion" routerLink="/hermingo"> Hermingo</span>
   <span class="opcion" routerLink="/formulario-halloween"> Formulario Halloween</span>
+  <span class="opcion" routerLink="/formulario2"> Formulario Halloween 2</span>
 
-  <!-- <button (click)="lista()">Lista</button> -->
+  <button (click)="listar()">Listar</button>
   
-  
+  <mat-slide-toggle
+    [checked]="temaService.modoOscuro()"
+    (change)="temaService.cambiarTema()">
+    {{ temaService.modoOscuro() ? 'Modo Oscuro' : 'Modo Claro' }}
+  </mat-slide-toggle>
+
 </mat-toolbar>
  

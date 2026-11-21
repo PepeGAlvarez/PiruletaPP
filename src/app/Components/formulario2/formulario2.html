@@ -1,0 +1,43 @@
+<div class="contenedor-principal">
+  <h1>Formulario de Halloween 2</h1>
+
+  <form [formGroup]="formularioHalloween" (ngSubmit)="enviar()">
+    <div class="formulario">
+
+      <label for="imagen">Imagen (URL):</label>
+      <input type="text" id="imagen" formControlName="imagen">
+      @if (formularioHalloween.controls.imagen.invalid) {
+        <span class="error">La URL de la imagen es obligatoria</span>
+      }
+
+      <label for="objeto">Objeto:</label>
+      <input type="text" id="objeto" formControlName="objeto">
+      @if (formularioHalloween.controls.objeto.invalid) {
+        <span class="error">El objeto debe tener entre 3 y 50 caracteres</span>
+      }
+
+      <label for="descripcion">Descripción:</label>
+      <textarea id="descripcion" formControlName="descripcion" rows="3"></textarea>
+      @if (formularioHalloween.controls.descripcion.invalid) {
+        <span class="error">La descripción debe tener al menos 10 caracteres</span>
+      }
+
+      <label for="propietario">Propietario:</label>
+      <input type="text" id="propietario" formControlName="propietario">
+      @if (formularioHalloween.controls.propietario.invalid) {
+        <span class="error">El propietario debe tener entre 3 y 50 caracteres</span>
+      }
+
+      <button type="submit" [disabled]="formularioHalloween.invalid">Enviar</button>
+    </div>
+  </form>
+
+<div class="lista-tarjetas">
+    @for (objetoActual of objetosHalloween; track $index) {
+      <app-tarjeta-halloween 
+      [item]="objetoActual"
+        (eliminar)="eliminarObjeto($event)">
+      </app-tarjeta-halloween>
+    }
+  </div>
+</div>

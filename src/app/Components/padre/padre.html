@@ -1,3 +1,6 @@
-<app-hijo [mensaje]="'Yo soy tu hijo'"></app-hijo>
+<div class="padre">
+  <h1>{{ textoRecibido }}</h1>
+<app-hijo [mensaje]="'Hola, papa'" (tunelNotificar)="manejarEvento($event)"></app-hijo>
 <app-hijo [mensaje]="'...'"></app-hijo>
 <app-hijo [mensaje]="'Yo soy el benjamín'"></app-hijo>
+</div>

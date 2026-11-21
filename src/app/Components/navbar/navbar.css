@@ -5,7 +5,8 @@
 }
 
 .opcion:hover {
-    color: var(--mat-sys-secondary);
+    /* color: var(--mat-sys-secondary); */
+    color : pink;
 }
 
 .navbar {
@@ -15,4 +16,15 @@
     padding: 5px;
     background-color: var(--mat-sys-primary);
     color: var(--mat-sys-on-primary);
+}
+ /* OJO! Con el operador + se aplica el border-left a todos los elementos siempre que tenga a la izquierda otro elemento 
+ con la clase opcion */
+.opcion + .opcion {        
+    border-left: 1px solid var(--mat-sys-on-primary);
+    padding-left: 10px; /* 5px propios + 5px extra para compensar el margin-right del elemento anterior */
+}
+
+.toolbar-oscura {
+  background-color: #111111 !important;
+  color: #ffffff !important;
 }

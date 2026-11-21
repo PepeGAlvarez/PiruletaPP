@@ -1,0 +1,16 @@
+<div class="tarjeta">
+
+  <div class="tarjeta-izquierda">
+    <img [src]="item.imagen" [alt]="item.objeto">
+  </div>
+
+
+  <div class="tarjeta-derecha">
+    <div>
+      <h3 class="titulo">{{ item.objeto }}</h3>
+      <p class="descripcion">{{ item.descripcion }}</p>
+    </div>
+    <p class="propietario">Propietario: {{ item.propietario }}</p>
+    <button type="button" class="btn-eliminar" (click)="pulsarEliminar()">Eliminar</button>
+  </div>
+</div>

@@ -8,6 +8,7 @@ import { FormularioHalloween } from './Components/formulario-halloween/formulari
 import { Hermingo } from './Components/hermingo/hermingo';
 import { Padre } from './Components/padre/padre';
 import { Hijo } from './Components/hijo/hijo';
+import { Formulario2 } from './Components/formulario2/formulario2';
 
 
 export const routes: Routes = [
@@ -20,6 +21,7 @@ export const routes: Routes = [
     {path: 'hermingo', component: Hermingo},
     {path: 'padre', component: Padre},
     {path: 'hijo', component: Hijo},
+    {path: 'formulario2', component: Formulario2},
     {path: '**', component: PageNotFound}
 
 
