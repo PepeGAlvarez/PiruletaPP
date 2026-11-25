@@ -1,0 +1,11 @@
+.aplicacion {
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+.aplicacion.oscuro {
+  background-color: #18181b;
+  color: #f4f4f5;
+}

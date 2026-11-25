@@ -9,9 +9,9 @@ import { Component, signal } from '@angular/core';
 
 export class Calculadora {
 
-  pantalla = signal('0');
+  pantalla = signal('0');   // Es un string porque vamos a "pintar" los números.
 
-  primerNumero: number | null = null;
+  primerNumero: number | null = null;   // Para que pueda arrancar sin valor 
   operador: string | null = null;
   esperandoSegundoNumero = false;
 
@@ -22,7 +22,7 @@ export class Calculadora {
 
   pulsarBoton(valor: string) {
 
-    if (valor === 'AC') {
+    if (valor === 'AC') {           // REseteamos todo al pulsar AC
       this.pantalla.set('0');
       this.primerNumero = null;
       this.operador = null;
@@ -31,7 +31,7 @@ export class Calculadora {
     }
 
     if (valor === '+' || valor === '-' || valor === '*' || valor === '/') {
-      this.primerNumero = Number(this.pantalla());
+      this.primerNumero = Number(this.pantalla());    // Casting a número
       this.operador = valor;
       this.esperandoSegundoNumero = true;
       return;

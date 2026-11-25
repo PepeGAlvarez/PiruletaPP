@@ -10,7 +10,8 @@ import { TarjetaHalloweenComponent } from '../tarjeta-halloween/tarjeta-hallowee
 })
 export class Formulario2 {
 
-  objetosHalloween: any[] = [];
+  objetosHalloween: any[] = [];   // No importa el tipo de dato, montamos el array
+  private siguienteId = 1;        //Contador ID
 
   formularioHalloween = new FormGroup({
     imagen: new FormControl('', [Validators.required]),
@@ -19,24 +20,25 @@ export class Formulario2 {
     propietario: new FormControl('', [Validators.required, Validators.minLength(3), Validators.maxLength(50)]),
   });
 
-enviar() {
+  enviar() {
     if (this.formularioHalloween.valid) {
       const nuevoObjeto = {
+        id: this.siguienteId++,
         imagen: this.formularioHalloween.value.imagen,
         objeto: this.formularioHalloween.value.objeto,
         descripcion: this.formularioHalloween.value.descripcion,
         propietario: this.formularioHalloween.value.propietario,
       };
 
-      this.objetosHalloween.push(nuevoObjeto);
+      this.objetosHalloween.push(nuevoObjeto);  //Nueva tarjeta sin borrar las anterioes
       this.formularioHalloween.reset();
     }
   }
 
   eliminarObjeto(objetoAEliminar: any) {
-    const posicion = this.objetosHalloween.indexOf(objetoAEliminar);
-    if (posicion !== -1) {
-      this.objetosHalloween.splice(posicion, 1);
+    const posicion = this.objetosHalloween.indexOf(objetoAEliminar);  // Recibimos en objetoAEliminar la tarjeta que marcamos como Eliminar que PADRE recogió como $event
+    if (posicion !== -1) {    //Si no está en la lista (posición -1) nada, si está borramos el objeto de la lista
+      this.objetosHalloween.splice(posicion, 1);    //Splice para poder borrar elementos de enmedio reordenando
     }
   }
 }

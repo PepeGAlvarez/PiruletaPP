@@ -40,8 +40,8 @@ background-color: green;
 
 .botones {
   display: flex;
-  flex-direction: column; /* Pone el h1 arriba y los botones debajo */
-  align-items: center;    /* Centra el h1 y los botones horizontalmente */
+  flex-direction: column; 
+  align-items: center;    
   margin-top: 20px;
   gap: 10px;
 }

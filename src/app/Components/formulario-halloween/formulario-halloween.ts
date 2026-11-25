@@ -10,7 +10,7 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular
 export class FormularioHalloween {
 
   objetos: string[] = [];
-
+  private siguienteId = 1;  
   formularioHalloween =  new FormGroup({ 
     nombre: new FormControl('', [ Validators.required, Validators.maxLength(50), Validators.minLength(2), ]),
     email: new FormControl('', [ Validators.required,Validators.email, ]),
@@ -22,13 +22,13 @@ export class FormularioHalloween {
   enviar() {
     // console.log('Formulario enviado!!!!');
     console.log(this.formularioHalloween.value);
-    console.log(this.formularioHalloween.get('email')?.value);
+    console.log(this.formularioHalloween.get('email')?.value);  // El ? evita que se rompa el programa si hay un null. Una especie de if.
     // const variable = this.formularioHalloween.get('email')?.value;
    if (this.formularioHalloween.valid) {
       const nuevoObjeto = this.formularioHalloween.get('objeto')?.value;
       if (nuevoObjeto) {
         this.objetos.push(nuevoObjeto);
-        this.formularioHalloween.reset(); // Reinicia el formulario después de enviar los datos!!!!!
+        this.formularioHalloween.reset(); // Limpia  el formulario después de enviar los datos!!!!!
       }
    } 
   }

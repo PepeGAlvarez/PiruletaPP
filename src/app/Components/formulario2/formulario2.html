@@ -32,10 +32,10 @@
     </div>
   </form>
 
-<div class="lista-tarjetas">
-    @for (objetoActual of objetosHalloween; track $index) {
+  <div class="lista-tarjetas">
+    @for (objetoActual of objetosHalloween; track objetoActual.id) {
       <app-tarjeta-halloween 
-      [item]="objetoActual"
+        [item]="objetoActual"
         (eliminar)="eliminarObjeto($event)">
       </app-tarjeta-halloween>
     }

@@ -1,0 +1,18 @@
+<div class="pantalla-juego">
+  <div class="zona-imagen"></div>
+
+  <div class="zona-juego">
+    <h2>Puntos: {{ puntos() }}</h2>
+    <p>Sumas de {{ puntosPorClic() }} en {{ puntosPorClic() }}</p>
+
+    <img
+      src="/images/cookie-47942.png"
+      alt="Galleta"
+      class="imagen-clic"
+      [class.creciendo]="creciendo()"
+      (click)="hacerClic()"
+    >
+
+    <button type="button" (click)="reiniciar()">Reiniciar</button>
+  </div>
+</div>

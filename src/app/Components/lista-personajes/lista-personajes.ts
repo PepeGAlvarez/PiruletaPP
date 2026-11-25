@@ -9,6 +9,8 @@ import { Component } from '@angular/core';
 export class ListaPersonajes {
   
 
+  // Incluimos cinco personajes, con binding de cada imagen
+  
 personajes:personaje[] = [
   new personaje("Yoda", "/images/Yoda.png", "Como Jordi Pujol, pero a este se le entiende."),
   new personaje("Boba Fett", "/images/Boba.png", "This is the guay."),

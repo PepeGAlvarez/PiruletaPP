@@ -5,7 +5,9 @@ import { Tema } from '../../services/tema';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @Component({
-  imports: [MatToolbarModule, RouterLink, MatSlideToggleModule, RouterLinkActive],
+  imports: [MatToolbarModule, RouterLink, MatSlideToggleModule, 
+    // RouterLinkActive
+  ],
   selector: 'app-navbar',
   styleUrl: './navbar.css',
   templateUrl: './navbar.html',

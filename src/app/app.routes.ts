@@ -9,7 +9,7 @@ import { Hermingo } from './Components/hermingo/hermingo';
 import { Padre } from './Components/padre/padre';
 import { Hijo } from './Components/hijo/hijo';
 import { Formulario2 } from './Components/formulario2/formulario2';
-
+import { Cookieclicker } from './Components/cookieclicker/cookieclicker';
 
 export const routes: Routes = [
     {path: '', component: Semaforo},
@@ -22,6 +22,7 @@ export const routes: Routes = [
     {path: 'padre', component: Padre},
     {path: 'hijo', component: Hijo},
     {path: 'formulario2', component: Formulario2},
+    {path: 'cookieclicker', component: Cookieclicker},
     {path: '**', component: PageNotFound}
 
 

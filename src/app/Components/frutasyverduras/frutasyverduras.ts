@@ -10,16 +10,16 @@ export class Frutasyverduras {
 
 // nombre_frutas:string[] = ["Manzana", "Banana", "Naranja", "Fresa", "Uva"];
 
-frutas:fruta[] = [
-  new fruta("Manzana", true, "/images/manzana.png"),
-  new fruta("Banana", false, "/images/banana.png"),
-  new fruta("Naranja", true, "/images/naranja.png"),
-  new fruta("Fresa", false, "/images/fresa.png"),
-  new fruta("Uva", true, "/images/uva.png")
+frutas:Fruta[] = [
+  new Fruta("Manzana", true, "/images/manzana.png"),
+  new Fruta("Banana", false, "/images/banana.png"),
+  new Fruta("Naranja", true, "/images/naranja.png"),
+  new Fruta("Fresa", false, "/images/fresa.png"),
+  new Fruta("Uva", true, "/images/uva.png")
 ];
 }
 
-class fruta {
+class Fruta {
   nombre:string;
   like:boolean;
   imagen:string;
